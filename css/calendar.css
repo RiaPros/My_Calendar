@@ -1,0 +1,72 @@
+#calendar {
+    width: 80vw; 
+    height: 70vh; 
+    margin: auto; 
+    margin-top: 2vh;
+    background-color: #FFECB5; 
+    border: 10px solid #1D1B14;
+    border-top-left-radius: 5%; 
+    border-top-right-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#calendar thead {
+    background-color: #FFBD00;
+}
+
+#calendar thead tr:first-child th div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar h4, #calendar h3 {
+    margin: 0;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #1D1B14;
+}
+
+.icon {
+    font-size: 3vh;
+    cursor: pointer;
+    padding: 0 2vh;
+    color: #1D1B14;
+}
+
+#calendar-month {
+    width: 150px; 
+    text-align: center;
+    white-space: nowrap; 
+}
+
+#calendar table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5vh;
+    border-top-left-radius: 5%; 
+    border-top-right-radius: 5%; 
+    overflow: hidden; 
+}
+
+#calendar th {
+    font-size: 2vh;
+    margin-top: 1.2vh;
+}
+
+#calendar td {
+    width: 14.28%; /* Each day takes up equal width */
+    height: calc(80vh / 7); /* Adjust height based on calendar height */
+    padding: 1vh;
+    text-align: center;
+    font-size: 2vh;
+}
+
+
