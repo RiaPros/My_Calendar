@@ -1,20 +1,21 @@
 #today {
-    height: 18vh; 
+    height: 12vh; 
     padding: 0 4.2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 3vh; 
+    margin-bottom: 1vh; 
 }
 
 #today h1 {
     font-size: 6vh;
     margin: 0;
+    margin-top: 1vh;
 }
 
-#today h2, #today h3 {
+#today h3 {
     margin: 0; 
 }
 
@@ -24,10 +25,6 @@
     gap: 1.2vw; 
 }
 
-#today .cur h2 {
-   font-size: 4.5vh;
-}
-
 #today .cur h3 {
-    font-size: 3vh;
- }
+   font-size: 3.8vh;
+}

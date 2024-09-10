@@ -1,9 +1,9 @@
 #calendar {
-    width: 80vw; 
-    height: 70vh; 
+    width: 87vw; 
+    height: 78.5vh; 
     margin: auto; 
     margin-top: 2vh;
-    background-color: #FFECB5; 
+    background-color: #1D1B14; 
     border: 10px solid #1D1B14;
     border-top-left-radius: 5%; 
     border-top-right-radius: 5%;
@@ -58,15 +58,92 @@
 
 #calendar th {
     font-size: 2vh;
-    margin-top: 1.2vh;
+    margin-top: 1.1vh;
+    border-bottom: 2px solid #1D1B14;
 }
+
 
 #calendar td {
-    width: 14.28%; /* Each day takes up equal width */
-    height: calc(80vh / 7); /* Adjust height based on calendar height */
-    padding: 1vh;
+    width: 14.3%; 
+    height: calc(78.5vh / 7); 
+    padding: 1.5vh;
     text-align: center;
     font-size: 2vh;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 15%;
+    background-color: #FFECB5;
 }
 
+/* INSIDE EACH DAY CELL */
+#calendar .cell-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0.5vh;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
 
+#calendar .date {
+    position: absolute;
+    width: 2.5vh;
+    height: 2.5vh;
+    top: 0.8px;
+    right: 0.8px;
+    font-size: 2vh;
+    font-weight: bold;
+    color: #1D1B14;
+    background-color: #FFBD00;
+    border-radius: 50%;
+    font-family: "Nerko One", cursive;
+}
+
+#calendar .task-input {
+    width: 100%;
+    height: 3vh; 
+    resize: none; 
+    font-size: 1.6vh;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #1D1B14;
+    overflow-y: auto; 
+}
+
+#calendar .checkbox-list {
+    margin-top: 1vh;
+    width: 100%;
+    height: 6vh; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+#calendar .checkbox-list input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#calendar .checkbox-list label {
+    font-size: 1.4vh;
+}
+
+/* Previous and next month days */
+#calendar .colour {
+    background-color: #FFBD00;
+}
+
+#calendar .colour .date {
+    color: #FFECB5;
+    background-color: #1D1B14;
+}
+
+/* Today's cell */
+#calendar #current-day {
+    background-color: #1D1B14;
+}

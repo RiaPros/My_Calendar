@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/today_header.css">
     <link rel="stylesheet" href="css/calendar.css">
@@ -13,13 +13,10 @@
     <div id="today">
         <h1 class="center default-cursor">Deadlines</h1>
         <div class="cur">
+            <h3 id="cur-day" class="center today-heading default-cursor">Monday</h1>
+            <h3 id="cur-date" class="center today-heading default-cursor">9</h1>
             <h3 id="cur-month" class="center today-heading default-cursor">September</h2>
             <h3 id="cur-year" class="center today-heading default-cursor">2024</h2>
-        </div>
-        
-        <div class="cur">
-            <h2 id="cur-day" class="center today-heading default-cursor">Monday</h1>
-            <h2 id="cur-date" class="center today-heading default-cursor">9</h1>
         </div>
     </div>
     
@@ -30,11 +27,11 @@
                     <th colspan="7">
                         <h4 id="cal-year">2024</h4>
                         <div>
-                            <i class="icon fas fa-caret-left"></i>
+                            <i onclick="previousMonth();" class="icon fas fa-caret-left"></i>
                             <div id="calendar-month">
                                 <h3 id="cal-month">September</h3>
                             </div>
-                            <i class="icon fas fa-caret-right"></i>
+                            <i onclick="nextMonth();" class="icon fas fa-caret-right"></i>
                         </div>
                     </th>
                 </tr>
@@ -50,52 +47,319 @@
             </thead>
             <tbody id="table-body">
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container">
+                            <span class="date">1</span>
+                            <textarea class="task-input" placeholder="Enter tasks..."></textarea>
+                            <ul class="bullet-list"></ul> 
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/dates.js"></script>
+    <script type="text/javascript" src="js/start.js"></script>
 </body>
 </html>
